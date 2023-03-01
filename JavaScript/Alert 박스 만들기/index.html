@@ -9,14 +9,14 @@
 </head>
 <body>
     <div class="alert-box" id="alert">알림창임 
-        <button onclick= "알림창닫기()" >닫기</button>
+        <button onclick= "알림창닫기('none');" >닫기</button>
     </div>
     <!-- on click 속성 : 버튼 클릭 시 이 코드 실행해준다.  -->
     <!-- <button onclick="alert 박스 보여주세요">버튼</button> -->
     <!-- alert 박스 보여주세요 이부분을 display block으로 구체적으로 코드 작성하면 된다. -->
     <!-- document.getElementById('alert').innerHTML.style.display = 'block';  -->
     <!-- 정답코드 -->
-    <button onclick= "알림창열기()">버튼</button>
+    <button onclick= "알림창열기('block');">버튼</button>
 
     <!-- 숙제 : Alert 박스 내에 닫기 버튼과 기능 만들기 -->
     <!-- 기능 : 닫기 버튼을 누르면 Alert 박스가 사라져야 합니다.  -->
@@ -26,16 +26,41 @@
     <script>
         // function은 여러개 생겨도 상관없다. 
 
-        function 알림창열기() {
-            document.getElementById('alert').style.display = 'block';
+        function 알림창열기(구멍) {
+            document.getElementById('alert').style.display = 구멍;
         }
         // document.getElementById('alert').style.display = 'block'; 이렇게 긴 코드를 우리가 '작명' 한 단어로 축약해준다.
 
 
+        // * function에 구명 뚫기 
+        // function 알림창열기(구멍) {
+        //     document.getElementById('alert').style.display = 구멍;
+        // }
+        // 알림창열기(구멍); : 알림창열기 안의 코드를 실행해주세요.
+        // 알림창열기('안녕'); : 구멍에 '안녕' 넣어서 알림창열기 안의 코드를 실행해주세요.
+
+        // 그렇다면 구멍을 어떻게 사용할 수 있을까?
+        // 알림창열기('block'); : 알림창 열기 
+        // 알림창열기('none'); : 알림창 닫기 
+        // =>⭐ 따라서 전에는 기능 2개를 축약하려고 함수 2개나 만들었다면, 이제는 2개 필요없고 함수 1개만으로 구현이 가능하다 => 구멍 문법
+
+        // 정확하게 개발용어로 `파라미터` 라고 한다. 
+        // 파라미터는 필수 문법이 아니다.
+        // , 를 이용해서 파라미터 여러개 가능하다. 
+
+        // * 파라미터 예시 
+        // function plus(구멍) {
+        //     2 + 구멍
+        // }
+        // plus(1); 
+        // : 구멍 자리에 1 넣어서 plus 안의 코드 실행해줘
+        // : 이렇게 사용하면 굳이 비슷한 함수 여러개를 만들 필요가 없다.
+
+
         // 숙제 : Alert 박스 닫는 코드로 function 이용해서 짧게 한 단어로 축약하기 
-        function 알림창닫기() {
-            document.getElementById('alert').style.display = 'none';
-        }
+        // function 알림창닫기() {
+        //     document.getElementById('alert').style.display = 'none';
+        // }
     </script>
     
 </body>
