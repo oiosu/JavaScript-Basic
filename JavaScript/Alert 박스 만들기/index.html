@@ -18,13 +18,19 @@
     <!-- alert 박스 보여주세요 이부분을 display block으로 구체적으로 코드 작성하면 된다. -->
     <!-- document.getElementById('alert').innerHTML.style.display = 'block';  -->
     <!-- 정답코드 -->
-    <button onclick="document.getElementById('alert').style.display = 'block';">버튼</button>
+    <button onclick="작명()">버튼</button>
 
     <!-- 숙제 : Alert 박스 내에 닫기 버튼과 기능 만들기 -->
     <!-- 기능 : 닫기 버튼을 누르면 Alert 박스가 사라져야 합니다.  -->
     <!-- <button onclick="document.getElementById('alert).style.display = 'none';"></button> -->
-    
-   
+
+
+    <script>
+        function 작명() {
+            document.getElementById('alert').style.display = 'block';
+        }
+        // document.getElementById('alert').style.display = 'block'; 이렇게 긴 코드를 우리가 '작명' 한 단어로 축약해준다.
+    </script>
     
 </body>
 </html>
