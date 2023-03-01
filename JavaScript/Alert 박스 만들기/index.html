@@ -9,16 +9,14 @@
 </head>
 <body>
     <div class="alert-box" id="alert">알림창임 
-        <button onclick="document.getElementById('alert').style.display = 'none';" >
-            닫기
-        </button>
+        <button onclick= "알림창닫기()" >닫기</button>
     </div>
     <!-- on click 속성 : 버튼 클릭 시 이 코드 실행해준다.  -->
     <!-- <button onclick="alert 박스 보여주세요">버튼</button> -->
     <!-- alert 박스 보여주세요 이부분을 display block으로 구체적으로 코드 작성하면 된다. -->
     <!-- document.getElementById('alert').innerHTML.style.display = 'block';  -->
     <!-- 정답코드 -->
-    <button onclick="작명()">버튼</button>
+    <button onclick= "알림창열기()">버튼</button>
 
     <!-- 숙제 : Alert 박스 내에 닫기 버튼과 기능 만들기 -->
     <!-- 기능 : 닫기 버튼을 누르면 Alert 박스가 사라져야 합니다.  -->
@@ -26,10 +24,18 @@
 
 
     <script>
-        function 작명() {
+        // function은 여러개 생겨도 상관없다. 
+
+        function 알림창열기() {
             document.getElementById('alert').style.display = 'block';
         }
         // document.getElementById('alert').style.display = 'block'; 이렇게 긴 코드를 우리가 '작명' 한 단어로 축약해준다.
+
+
+        // 숙제 : Alert 박스 닫는 코드로 function 이용해서 짧게 한 단어로 축약하기 
+        function 알림창닫기() {
+            document.getElementById('alert').style.display = 'none';
+        }
     </script>
     
 </body>
