@@ -4,78 +4,68 @@
 
 ## 🍎 Level_01 
 
-**01_자바스크립트의 근본** 
-> html 파일 안에 몰래 숨어서 `html 조작과 변경` 을 담당하는 언어
+## [00. 강의소개와 자바스크립트의 근본](https://github.com/oiosu/JavaScript-Basic/blob/master/00_%EA%B0%95%EC%9D%98%EC%86%8C%EA%B0%9C%EC%99%80%20%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%9D%98%20%EA%B7%BC%EB%B3%B8.md)
+### **자바스크립트는 HTML 조작을 위해 사용합니다.** 
 
-🧐 왜 조작을 할까? 
-* 탭, 모달 등 웹페이지UI 만들 수 있다
-* 유저가 입력한 데이터를검사할 수 도 있다.
-* 유저가 버튼을 누르면 서버로 데이터 요청을 할 수 있다.  
-<br />
+> html 파일 안에 몰래 숨어서 **"html 조작과 변경"** 을 담당하는 언어
 
+## [01_동적 UI를 만드는 스텝(Alert 박스)](https://github.com/oiosu/JavaScript-Basic/blob/master/01_%EB%8F%99%EC%A0%81%20UI%EB%A5%BC%20%EB%A7%8C%EB%93%9C%EB%8A%94%20%EC%8A%A4%ED%85%9D(Alert%20%EB%B0%95%EC%8A%A4).md)
 
-**02_자바스크립트 기초**
- 
-**◼ JS로 HTML 조작하는 방법**
-```javascript
-  <script> 자바스크립트를 실행하는 부분 <script/>
-```
-* `안녕하세요` 를 `안녕`으로 바꾸는 코드 
-```HTML
-  <h1 id="hello">안녕하세요</h1>
-```
-```javascript
-  <script> 
-     document.getElementById('hello').innerHTML = '안녕';
-  <script/>
-```
-**🔻 코드에 대한 자세한 해석** 
-> * `document` : html 문서 
-> * `.` 점 : ~의
-> * `getElement` : 요소를 가져와라 
-> * `ById('hello')` : id가 hello인 것 
-> * `document.getElementById('hello')` : html 문서의 id가 hello 인 요소 찾아와 
-> * `innerHTML` : 내부 HTML
-> * `document.getElementById('hello').innerHTML = "안녕";` : HTML 문서의 ID가 HELLO인 요소 찾아와 그거의 내부 HTML을 '안녕' 으로
-> * `=` : 오른쪽을 왼쪽에 넣으라는 뜻 
+* Alert 박스 내 닫기 버튼과 띄우기 버튼 기능 만들어 보기
 
-<br />
+## [02. 자바스크립트 function 문법 사용법](https://github.com/oiosu/JavaScript-Basic/blob/master/02_%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20function%20%EB%AC%B8%EB%B2%95%20%EC%82%AC%EC%9A%A9%EB%B2%95.md)
 
-**◼ HTML의 모든 것 바꿀 수 있다** 
-```javascript
-  document.getElementById('??1').??2 = '??3';
-```
-* `??` 부분 3개만 잘 채우면 상상하는 모든 것 변경 가능
-* `??1 : 아이디 적기` , `??2 : 무엇을` , `??3 : 어떻게` 
+* 새로운 문법을 배우면 어디에 사용하면 좋을지 계속 생각하기 <br>
+*  조작할 떄 html 의 하단에 코드를 작성해야 한다 (오류 줄이기) <br>
+*  자바스크립트 셀렉터 오타 주의하기 (잘못찾는 경우가 많다) <br>
+*  of null 이라는 에러 발생한다면 셀렉터 잘못 작성한 경우이다. <br>
+*  다른 문법 오타도 주의하기 (동작을 잘 못한다면 다시 살펴보기) <br>
 
-<br />
+## [03. function의 파라미터 문법](https://github.com/oiosu/JavaScript-Basic/blob/master/03_function%EC%9D%98%20%ED%8C%8C%EB%9D%BC%EB%AF%B8%ED%84%B0%20%EB%AC%B8%EB%B2%95.md)
 
-
-* 만약 글자색을 빨강색으로 변경하고 싶다면? 
+###  function에 구명 뚫기 
 
 ```javascript
-document.getElementById('hello').style.color = 'red';
+function 알림창열기(구멍) {
+    document.getElementById('alert').style.display = 구멍;
+}
 ```
 
-* 초보를 고수로 바꾸기 
-```HTML
-  <h1 id="hi">JS 초보에요</h1>
+```html
+<button onclick= "알림창닫기('none');" >닫기</button>
+<button onclick= "알림창열기('block');">버튼</button>
 ```
+
+* `알림창열기(구멍);` : 알림창열기 안의 코드를 실행해주세요.
+* `알림창열기('안녕');` : 구멍에 `'안녕'` 넣어서 알림창열기 안의 코드를 실행해주세요.
+
+
+
+#### 🧐 그렇다면 구멍을 어떻게 사용할 수 있을까?
+
+`알림창열기('block');` : 알림창 열기 
+
+`알림창열기('none');` : 알림창 닫기 
+
+⭐ 따라서 전에는 기능 2개를 축약하려고 함수 2개나 만들었다면, 이제는 2개 필요없고 함수 1개만으로 구현이 가능하다 => 구멍 문법
+
+
+
+---
+
+* `구멍` 은 정확하게 개발 용어로 `파라미터` 라고 한다. 
+* `파라미터`는 필수 문법이 아니다. 
+* `,`를 사용해서 파라미터 여러개 작성 가능하다. 
+
+---
+
+#### 파라미터 예시 
 
 ```javascript
- document.getElementById('hi').innerHTML = 'JS 고수에요';
+fuction plus(구멍){
+    2 + 구멍
+}
+//plus(1);
+// : 구멍 자리에 1 넣어서 plus 안의 코드 실행해줘
+// : 이렇게 사용하면 굳이 비슷한 함수 여러개를 만들 필요가 없다. 
 ```
-> * `hi` : 바꿀요소ID
-> * `innerHTML` : 무엇을 
-> * `'JS 고수에요';` : 어떻게 
-
-* `getElementById('hi')` => **셀렉터** 라고 부름 
-
-<br />
-
-🤷‍♀️ 자바스크립트 코드 길어보인다 왜 이렇게 길게 코드를 작성해야할까? 
-> 우리는 `왜` 라는 고민을 항상 해야한다. 
-> - 모든 프로그래밍은 컴퓨터에게 일 시키는행위 
-> - 컴퓨터는 사람처럼 대하면 안된다. 
-> - 컴퓨터에게 추상적인 명령이 아닌 구체적인 설명을 포함한 명령을 해야한다. 
-
