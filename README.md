@@ -16,7 +16,7 @@
 ## [02. 자바스크립트 function 문법 사용법](https://github.com/oiosu/JavaScript-Basic/blob/master/02_%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20function%20%EB%AC%B8%EB%B2%95%20%EC%82%AC%EC%9A%A9%EB%B2%95.md)
 
 * 새로운 문법을 배우면 어디에 사용하면 좋을지 계속 생각하기 <br>
-*  조작할 떄 html 의 하단에 코드를 작성해야 한다 (오류 줄이기) <br>
+*  조작할 때 html 의 하단에 코드를 작성해야 한다 (오류 줄이기) <br>
 *  자바스크립트 셀렉터 오타 주의하기 (잘못찾는 경우가 많다) <br>
 *  of null 이라는 에러 발생한다면 셀렉터 잘못 작성한 경우이다. <br>
 *  다른 문법 오타도 주의하기 (동작을 잘 못한다면 다시 살펴보기) <br>
