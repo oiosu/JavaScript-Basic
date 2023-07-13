@@ -1,5 +1,4 @@
 # JavaScript-Basic
-> JavaScript 입문과 웹 UI개발
 <br />
 
 ## 🍎 Level_01 
