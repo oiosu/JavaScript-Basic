@@ -1,6 +1,5 @@
 # JavaScript-Basic
 <br />
-
 ## 🍎 Level_01 
 
 ## [00. 강의소개와 자바스크립트의 근본](https://github.com/oiosu/JavaScript-Basic/blob/master/00_%EA%B0%95%EC%9D%98%EC%86%8C%EA%B0%9C%EC%99%80%20%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%9D%98%20%EA%B7%BC%EB%B3%B8.md)
